@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>even-or-odd</title>
+  </head>
+
+  <body>
+    <div class="task">
+      <p>
+        Определите общее количество цифр в integer ( n>=0), заданном в качестве
+        входных данных для функции. Например, 9 - это одна цифра, 66 - 2 цифры,
+        а 128685 - 6 цифр. Будьте осторожны, чтобы избежать переполнения /
+        потери значимости.
+      </p>
+      <p>Все данные будут действительны.</p>
+    </div>
+
+    <div id="result">ttyt</div>
+
+    <script>
+      function digits(n) {
+        return n.toString().length;
+      }
+
+      document.getElementById("result").textContent = digits(65);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="task">
+      <p>
+        Это довольно просто. Ваша цель - создать функцию, которая удаляет первый
+        и последний символы строки. Вам дается один параметр - исходная строка.
+        Вам не нужно беспокоиться о строках, содержащих менее двух символов.
+      </p>
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+        function removeChar(str){
+            return str.slice(1, str.length - 1);
+
+            //return str.slice(1, -1);
+            
+        };
+
+      document.getElementById("result").textContent = removeChar('eloquent');
+    </script>
+  </body>
+</html>
