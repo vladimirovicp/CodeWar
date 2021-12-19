@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="task">
+    <p>Примечание: это ката вдохновлено идеей «Преобразовать число в строку!» . Попробуйте и это.</p>
+    <h2>Описание</h2>
+    <p>Нам нужна функция, которая может преобразовывать строку в число. Какие способы добиться этого вы знаете?
+    </p>
+    <p>
+      Примечание: не волнуйтесь, все входные данные будут строками, и каждая строка является вполне допустимым
+      представлением целого числа.
+    </p>
+
+    <h2>Примеры</h2>
+    <ul>
+      <li>"1234" --> 1234</li>
+      <li>"-7" --> -7</li>
+    </ul>
+  </div>
+
+  <div id="result"></div>
+
+  <script>
+
+    var stringToNumber = function (str) {
+      // put your code here
+      return parseInt(str);
+    }
+
+    document.getElementById("result").textContent = numberToString('67dd');
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>even-or-odd</title>
+</head>
+
+<body>
+  <div class="task">
+    <p>Создайте функцию, которая принимает целое число в качестве аргумента и возвращает «Четный» для четных чисел или
+      «Нечетный» для нечетных чисел.
+    </p>
+  </div>
+
+  <div id="result"></div>
+
+  <script>
+
+    function even_or_odd(number) {
+      // if (number % 2 == 0) {
+      //   return 'Even';
+      // } else {
+      //   return 'Odd';
+      // }
+
+      (number % 2 == 0) ? rezult = 'Even' : rezult = 'Odd';
+      return rezult;
+
+
+    }
+
+    document.getElementById("result").textContent = even_or_odd(3);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="task">
+    <h2>Обзор задачи</h2>
+    <p>Учитывая неотрицательное целое число n, напишите функцию to_binary/, ToBinary которая возвращает это число в
+      двоичном формате.
+    </p>
+
+    <h2>Примеры</h2>
+    <ul>
+      <li>to_binary(1) /* should return 1 */</li>
+      <li>to_binary(5) /* should return 101 */</li>
+      <li>to_binary(11) /* should return 1011 *//</li>
+    </ul>
+  </div>
+
+  <div id="result"></div>
+
+  <script>
+
+    var to_binary = function (str) {
+      // put your code here
+      return parseInt(str.toString(2));
+    }
+
+    document.getElementById("result").textContent = to_binary(1);
+  </script>
+</body>
+
+</html>
