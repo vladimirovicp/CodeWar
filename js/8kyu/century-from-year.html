@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="task">
+      <h2>Введение</h2>
+      <p>
+        Первые пролеты века от года 1 до и включая 100 год, второй век - от года
+        101 до и включая 200 года, и т.д.
+      </p>
+      >
+
+      <h2>Задача</h2>
+      <p>Учитывая год, верните век, в котором он находится.</p>
+
+      <h2>Примеры</h2>
+      <ul>
+        <li>1705 --> 18</li>
+        <li>1900 --> 19</li>
+        <li>1601 --> 17</li>
+        <li>2000 --> 20</li>
+      </ul>
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+    function century(year) { 
+      return Math.ceil(year/100);
+
+    }
+
+      document.getElementById("result").textContent = century('1600');
+    </script>
+  </body>
+</html>

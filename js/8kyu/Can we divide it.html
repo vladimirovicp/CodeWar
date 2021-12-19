@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="task">
+      Ваша задача - создать функцию isDivideBy(или is_divide_by), чтобы
+      проверить, number делится ли целое число как на целые числа, на a и на b.
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+      function isDivideBy(number, a, b) {
+        // good luck
+        if (number % a == 0 && number % b == 0) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      document.getElementById("result").textContent = isDivideBy(45, 5, 15);
+    </script>
+  </body>
+</html>
