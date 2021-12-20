@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="task">
+      <p>
+        Завершите решение так, чтобы оно возвращалось true, если первый переданный аргумент (строка) заканчивается вторым аргументом (также строкой).
+      </p>
+
+      <h2>Примеры:</h2>
+      <p>solution('abc', 'bc') // returns true</p>
+      <p>solution('abc', 'd') // returns false</p>
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+    function solution(str, ending){
+      // TODO: complete
+
+      if( ending==''){
+        return true;
+      }
+
+      return str.slice(-ending.length) == ending ? true : false;
+
+
+      //return str.endsWith(ending);
+      //return new RegExp(ending+"$", "i").test(str);
+
+      /*
+        var l = ending.length;
+        var str = str.slice(-l);
+        return str.match(ending) ? true : false;
+      */
+      
+
+
+
+    }
+
+      document.getElementById("result").textContent = solution('abc', '');
+    </script>
+  </body>
+</html>
