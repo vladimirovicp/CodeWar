@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="task">
+    <p>
+      Создайте функцию finalGrade, которая рассчитывает итоговую оценку учащегося в зависимости от двух параметров:
+      оценки для экзамена и ряда завершенных проектов.
+    </p>
+    <p>Эта функция должна принимать два аргумента: экзамен - оценка для экзамена (от 0 до 100), проекты - количество
+      завершенных проектов (от 0 и выше);</p>
+    <p>Эта функция должна возвращать число (окончательный класс). Существует четыре типа итоговых оценок:</p>
+    <ul>
+      <li>100, если оценка для экзамена превышает 90 или если ряд завершенных проектов более 10.</li>
+      <li>90, если оценка для экзамена превышает 75 и если количество завершенных проектов составляет минимум 5.</li>
+      <li>75, если оценка для экзамена превышает 50 и если количество завершенных проектов составляет минимум 2.</li>
+      <li>0, в других случаях</li>
+    </ul>
+
+    <h2>Примеры (Входы-->Вывод):</h2>
+    100, 12 --> 100<br>
+    99, 0 --> 100<br>
+    10, 15 --> 100<br>
+
+    85, 5 --> 90<br>
+
+    55, 3 --> 75<br>
+
+    55, 0 --> 0<br>
+    20, 2 --> 0<br>
+  </div>
+
+  <div id="result"></div>
+
+  <script>
+    function finalGrade(exam, projects) {
+
+      if ((exam >= 0)  && (exam <= 100) && (projects >= 0)){
+        if((exam > 90) || (projects > 10)) { return 100;}
+        if((exam > 75) && (projects >= 5)) { return 90;}
+        if((exam > 50) && (projects >= 2)) { return 75;}
+      }
+
+      return 0;
+
+
+      // if(exam > 90 || projects > 10) return 100;
+      // if(exam > 75 & projects >= 5) return 90;
+      // if(exam > 50 & projects >= 2) return 75;
+      // return 0;
+
+      // return (
+      //   exam > 90 || projects > 10 ? 100 :
+      //   exam > 75 && projects >= 5 ? 90 :
+      //   exam > 50 && projects >= 2 ? 75 : 0
+      // )
+
+
+      // switch (true) {
+      //  case (exam > 90 || projects > 10):
+      //  return 100
+      //  break;
+      //  case (exam > 75 && projects >= 5):
+      //  return 90;
+      //  break;
+      //  case (exam > 50 && projects >= 2):
+      //  return 75
+      //  break;
+      //  case (exam <= 55 || projects <= 2):
+      //  return 0;
+      //  break;
+       
+      // }
+
+    }
+
+    document.getElementById("result").textContent = finalGrade(0, 11);
+  </script>
+</body>
+
+</html>
