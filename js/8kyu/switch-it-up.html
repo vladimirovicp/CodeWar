@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="task">
+    <p>
+      Если указано число от 0 до 9, верните его словами.<br>
+
+      Input :: 1<br>
+
+      Output :: "One".<br>
+
+      Если ваш язык поддерживает это, попробуйте использовать оператор switch.<br>
+
+
+
+
+    </p>
+  </div>
+
+  <div id="result"></div>
+
+  <script>
+    function switchItUp(number){
+
+
+      switch(number){
+        
+      case 0: result = 'Zero'; break;  
+      case 1: result = 'One'; break;
+      case 2: result = 'Two'; break;
+      case 3: result = 'Three'; break;
+      case 4: result = 'Four'; break;
+      case 5: result = 'Five'; break;
+      case 6: result = 'Six'; break;
+      case 7: result = 'Seven'; break;
+      case 8: result = 'Eight'; break;
+      case 9: result = 'Nine'; break;
+      }
+
+      return result;
+
+      //switchItUp=n=>["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"][n]
+
+
+      //  var words = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine'];
+      //return words[number];
+
+
+
+    //Write your own Code!
+    }
+
+    document.getElementById("result").textContent =  switchItUp(1);
+  </script>
+</body>
+
+</html>
