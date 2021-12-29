@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="task">
+    <h1>Вы сделаете это?</h1>
+    <p>
+
+      Вы были в походе с друзьями вдали от дома, но когда пришло время возвращаться, вы понимаете, что у вас
+      заканчивается топливо, а ближайший насос находится в 50 милях от дома! Вы знаете, что в среднем ваша машина
+      проезжает около 25 миль на галлон. Осталось 2 галлона. Учитывая эти факторы, напишите функцию, которая сообщит
+      вам, можно ли добраться до помпы или нет. Функция должна возвращать истину (1 в Прологе и NASM), если это
+      возможно, и ложь (0 в Прологе и NASM), если нет. Входные значения всегда положительны.
+    </p>
+  </div>
+
+  <div id="result"></div>
+
+  <script>
+    const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+
+      // TODO
+
+      return distanceToPump/mpg <=  fuelLeft ?  true :false;
+
+      // if( distanceToPump/mpg <=  fuelLeft){
+      //     return true;
+      // } else{
+      //   return false;
+      // }
+
+      //return distanceToPump/mpg <= fuelLeft
+
+    };
+
+    document.getElementById("result").textContent = zeroFuel(50, 25, 2);
+  </script>
+</body>
+
+</html>

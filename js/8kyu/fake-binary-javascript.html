@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="task">
+    <p>
+      Учитывая строку цифр, вы должны заменить любую цифру ниже 5 на «0», а любую цифру от 5 и выше на «1». Верните полученную строку.
+<br>
+Примечание: ввод никогда не будет пустой строкой
+    </p>
+  </div>
+
+  <div id="result"></div>
+
+  <script>
+    function fakeBin(x){
+
+      let rezult ='';
+
+      for(i=0; i< x.length; i++){
+        x[i]<5 ? rezult = rezult + 0 :  rezult = rezult + 1;
+      }
+
+      return rezult;
+
+//       for(i=0; i<length(x); i++){
+
+// if( x[i]<5){
+//   rezult = rezult + 0;
+// } else {
+//   rezult = rezult + 1;
+// }
+// }
+
+// return x.split('').map(n => n < 5 ? 0 : 1).join('');
+//return x.replace(/\d/g, d => d < 5 ? 0 : 1);
+//return x.replace( /[0-4]/g, "0" ).replace( /[5-9]/g, "1" )
+//const fakeBin=x=>[...x].reduce((a,b)=>a+(~~(+b/5)),"")
+
+    }
+
+    document.getElementById("result").textContent = fakeBin('45385593107843568');
+  </script>
+</body>
+
+</html>
