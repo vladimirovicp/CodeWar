@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="task">
+    <p>
+      После тяжелой работы в офисе вы решаете отдохнуть в отпуске. Так что вы забронируете рейс для себя и своей девушки
+      и постараетесь оставить весь беспорядок позади.<br>
+
+      Вам понадобится арендованный автомобиль, чтобы вы могли путешествовать во время отпуска. Менеджер по аренде
+      автомобилей делает вам несколько хороших предложений.<br>
+
+      Ежедневная аренда машины стоит 40 долларов. Если вы арендуете машину на 7 или более дней, вы получите скидку 50
+      долларов. В качестве альтернативы, если вы арендуете машину на 3 или более дней, вы получите скидку в размере 20
+      долларов.
+      <br>
+      Напишите код, который выдаст общую сумму за разные дни (d).<br>
+
+
+    </p>
+  </div>
+
+  <div id="result"></div>
+
+  <script>
+    function rentalCarCost(d) {
+
+      rezult = 40 * d;
+
+      if( d >= 7){
+        rezult = rezult  - 50;
+      } else if( d >= 3){
+        rezult = rezult  - 20;
+      }
+      return rezult;
+
+    }
+
+    document.getElementById("result").textContent = rentalCarCost(10);
+  </script>
+</body>
+
+</html>

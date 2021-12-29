@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="task">
+    <p>
+      Вы пишете код для управления светофором в вашем городе. Вам нужна функция для обработки каждого изменения цвета с
+      зеленого на желтый, красный, а затем снова на зеленый.<br>
+
+      Завершите функцию, которая принимает строку в качестве аргумента, представляющего текущее состояние источника
+      света, и возвращает строку, представляющую состояние, в которое должен перейти свет.
+      <br>
+      Например, update_light ('green') должен возвращать 'yellow'.
+      <br>
+      Примечание. Используйте "" вместо "" в C ++.
+      <br>
+
+
+    </p>
+  </div>
+
+  <div id="result"></div>
+
+  <script>
+    function updateLight(current) {
+
+      rezult = 'none';
+
+      switch (current) {
+        case 'yellow': rezult = 'red';
+        break;
+        case 'green': rezult = 'yellow';
+        break;
+        case 'red': rezult = 'green';
+        break;
+
+      }
+      
+      return rezult;
+
+      //return current === 'yellow' ? 'red' : current === 'green' ? 'yellow' : 'green';
+
+    //   switch (current) {
+    // case 'green':
+    //   return 'yellow';
+    //   break;
+    // case 'yellow':
+    //   return 'red';
+    //   break;
+    // case 'red':
+    //   return 'green';
+    //   break;
+    // default:
+    //   throw 'Error: wrong input';
+    //   break;
+  //}
+
+
+//     const updateLight = current => {
+//   return {
+//     red: 'green',
+//     yellow: 'red',
+//     green: 'yellow'
+//   }[current];
+// }
+
+
+    }
+
+    document.getElementById("result").textContent = updateLight("green");
+  </script>
+</body>
+
+</html>

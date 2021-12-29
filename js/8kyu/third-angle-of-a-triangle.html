@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="task">
+    <p>
+      Вам даны два внутренних угла (в градусах) треугольника.<br>
+
+      Напишите функцию для возврата 3-го числа.<br>
+      
+      Примечание: будут проверяться только положительные целые числа.<br>
+      
+      https://en.wikipedia.org/wiki/Triangle<br>
+
+
+    </p>
+  </div>
+
+  <div id="result"></div>
+
+  <script>
+   function otherAngle(a, b) {
+
+    if ( a >=0 && b>=0 && a + b <= 180){
+      return 180 - a - b;
+    }
+
+    return error;
+
+   
+//     function otherAngle(a, b) {
+//   return 180-(a+b);
+// }
+
+  }
+
+    document.getElementById("result").textContent = otherAngle(10, 20);
+  </script>
+</body>
+
+</html>
