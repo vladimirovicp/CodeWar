@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="rez">123</div>
+
+    <script>
+        function fun() {
+
+            const n = 20;
+            let counter = 1; //счетчик - нужен для вноса значений от 1 до ... (зависит от n)
+            let composition = 1;
+            let Q = [];
+            let T = []; //объявили Е - можно заполнить ручками
+
+            let matrixR = [
+                [],
+                []
+            ]; // объявили R - можно заполнить ручками цифирки
+
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j < n; j++) {
+                    matrixR[[i], [j]] = counter;
+                    counter = counter + 1; //увеличиваем знаяения на 1
+                }
+            } //заполнил авто
+
+            counter = 1; //
+
+            for (let i = 0; i < n; i++) {
+                T[i] = counter;
+                counter = counter + 1;
+            } //заполнил авто 
+
+            //вычисляем компоненты Q
+            for (let i = 0; i < n; i++) {
+                let sum = 1;
+
+                for (let j = 0; j < n; j++) {
+                    sum = sum + matrixR[[i], [j]];
+                }
+                Q[i] = sum * T[i];
+            }
+
+
+            for (let i = 0; i < (n / 2); i++) {
+                composition = composition * (Q[i] + Q[n - 1 - i]);
+            }
+
+            return composition;
+
+
+
+
+
+        }
+
+
+
+
+
+        document.getElementById("rez").textContent = fun();
+    </script>
+
+</body>
+
+</html>
