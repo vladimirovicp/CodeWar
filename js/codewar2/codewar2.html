@@ -11,150 +11,122 @@
 <body>
 
 
+    <h2> 8 kyu <a href="https://www.codewars.com/kata/merge-two-sorted-arrays-into-one">name</a></h2>
+    <h3>Task №3</h3>
 
-    <h3>Task №2</h3>
-    <div>
-        Вам даны два отсортированных массива, которые оба содержат только целые числа. Ваша задача - найти способ объединить их в один, отсортированный в порядке asc. Завершите функцию mergeArrays (arr1, arr2), где arr1 и arr2 являются исходными отсортированными
-        массивами.
-        <br> Вам не нужно беспокоиться о проверке, поскольку arr1 и arr2 должны быть массивами с 0 или более целыми числами. Если arr1 и arr2 пусты, просто верните пустой массив.
-        <br> Примечание: arr1 и arr2 могут быть отсортированы в разных порядках. Также arr1 и arr2 могут иметь одинаковые целые числа. Удалить дублированный в возвращенном результате.
-    </div>
-    <div class="exemple">
-        <pre>
-        <code>
-          arr1 = [1, 2, 3, 4, 5];arr2 = [6, 7, 8, 9, 10];mergeArrays(arr1, arr2); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-          arr3 = [1, 3, 5, 7, 9];arr4 = [10, 8, 6, 4, 2];mergeArrays(arr3, arr4); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-          
-          arr5 = [1, 3, 5, 7, 9, 11, 12];arr6 = [1, 2, 3, 4, 5, 10, 12];mergeArrays(arr5, arr6); // [1, 2, 3, 4, 5, 7, 9, 10, 11, 12]
-        </code>
-      </pre>
-    </div>
-
-    <pre>
-      <code>
-
-      </code>
-    </pre>
-    <div id="task2">Результат:</div>
+    <div id="task3">Результат:</div>
 
     <script>
         function mergeArrays(arr1, arr2) {
 
-            function delDuplicate(value) {
-                return arr1.indexOf(value) < 0;
-            }
-            rezult = arr1.concat(arr2.filter(delDuplicate));
-            return rezult.sort((a, b) => a - b);
-
         }
 
-        //return Array.from(new Set(arr1.concat(arr2).sort((a,b) => (a-b))));
-        //return [...new Set(a.concat(b))].sort((a,b)=>a-b)
-        //return _.sortBy(_.union(arr1, arr2));
 
 
-
-        function descendingDescending(arr1, arr2) {
-            let i = arr1.length - 1,
-                j = arr2.length - 1,
-                output = [];
-            while (i >= 0 && j >= 0) {
-                if (arr1[i] < arr2[j]) {
-                    output[output.length] = arr1[i];
-                    i--;
-                } else if (arr1[i] > arr2[j]) {
-                    output[output.length] = arr2[j];
-                    j--;
-                } else {
-                    output[output.length] = arr1[i];
-                    i--;
-                    j--;
-                }
-            }
-            for (; i >= 0; i--)
-                output[output.length] = arr1[i];
-            for (; j >= 0; j--)
-                output[output.length] = arr2[j];
-            return output;
-        }
-
-        // function ascendingDescending(arr1, arr2){
-        //   let i = 0, j = arr2.length - 1, output = [];
-        //   while (i < arr1.length && j >= 0){
-        //     if (arr1[i] < arr2[j]){
-        //       output[output.length] = arr1[i];
-        //       i++;
-        //     }
-        //     else if (arr1[i] > arr2[j]){
-        //       output[output.length] = arr2[j];
-        //       j--;
-        //     }
-        //     else{
-        //       output[output.length] = arr1[i];
-        //       i++;
-        //       j--;
-        //     }
-        //   }
-        //   for (; i < arr1.length; i++)
-        //     output[output.length] = arr1[i];
-        //   for (; j >= 0; j--)
-        //     output[output.length] = arr2[j];
-        //   return output;
-        // }
-
-        // function ascendingAscending(arr1, arr2){
-        //   let i = 0, j = 0, output = [];
-        //   while (i < arr1.length && j < arr2.length){
-        //     if (arr1[i] < arr2[j]){
-        //       output[output.length] = arr1[i];
-        //       i++;
-        //     }
-        //     else if (arr1[i] > arr2[j]){
-        //       output[output.length] = arr2[j];
-        //       j++;
-        //     }
-        //     else{
-        //       output[output.length] = arr1[i];
-        //       i++;
-        //       j++;
-        //     }
-        //   }
-        //   for (; i < arr1.length; i++)
-        //     output[output.length] = arr1[i];
-        //   for (; j < arr2.length; j++)
-        //     output[output.length] = arr2[j];
-        //   return output;
-        // }
-
-        // function mergeArrays(arr1, arr2) {
-        //   let caseMap = 0;
-        //   if (arr1[0] < arr1[arr1.length - 1])
-        //     caseMap += 2;
-        //   if (arr2[0] < arr2[arr2.length - 1])
-        //     caseMap += 1;
-        //   switch (caseMap){
-        //     case 0 : return descendingDescending(arr1, arr2);
-        //     case 1 : return ascendingDescending(arr2, arr1);
-        //     case 2 : return ascendingDescending(arr1, arr2);
-        //     case 3 : return ascendingAscending(arr1, arr2);
-        //   }
-        // }
-
-        document.getElementById("task2").textContent = mergeArrays([1, 3, 5, 7, 9], [10, 8, 6, 4, 2]);
+        document.getElementById("task3").textContent = mergeArrays([1, 2, 3, 4], [5, 6, 7, 8]);
     </script>
 
 
 
-
-
-    <h2> 8 kyu <a href="https://www.codewars.com/kata/merge-two-sorted-arrays-into-one">name</a></h2>
-    <h3>Task №</h3>
-
-
-
     <h2> 7 kyu <a href="https://www.codewars.com/kata/16-plus-18-equals-214">name</a></h2>
-    <h3>Task №</h3>
+    <h3>Task №4</h3>
+
+
+    <div id="task4">Результат:</div>
+
+    <script>
+        function add(num1, num2) {
+
+            num1 = num1.toString();
+            num2 = num2.toString();
+
+            num1 = num1.split('');
+            num2 = num2.split('');
+
+            num1 = num1.reverse();
+            num2 = num2.reverse();
+
+            let max = 0;
+            let min = 0;
+
+            if (num1.length > num2.length) {
+                max = num1.length;
+                min = num2.length;
+            } else {
+                max = num2.length;
+                min = num1.length;
+            }
+
+            let num3 = [];
+
+
+            for (let i = 0; i < max; i++) {
+
+                if (i < min) {
+                    num3[i] = parseInt(num1[i]) + parseInt(num2[i]);
+                } else {
+                    num3[i] = num1.length > num2.length ? parseInt(num1[i]) : parseInt(num2[i]);
+                }
+            }
+
+            // for (let i = 0; i < num3.length; i++) {
+            //     if (num3[i] > 9) {
+            //         num3[i] = Math.floor(num3[i] % 10);
+
+            //         if (i < num3.length) {
+            //             num3[i + 1] = num3[i + 1] + 1;
+            //         } else {
+            //             num3[i + 1] = 1;
+            //         }
+            //     }
+            // }
+
+            let rezult = num3.reverse();
+            rezult = rezult.join('');
+
+
+
+            return parseInt(rezult);
+
+        }
+
+
+        //         function add(num1, num2) {
+
+
+        // num1 = num1.toString().split("").reverse().join("");
+        // num2 = num2.toString().split("").reverse().join("");
+
+
+
+        // if (num1.length < num2.length) {
+        //     [num1, num2] = [num2, num1];
+        // }
+
+
+
+        // var returnString = "";
+        // for (var i = 0; i < num1.length; i++) {
+        //     var int1 = parseInt(num1[i]);
+        //     var int2 = parseInt(num2[i] || 0);
+
+        //     returnString = (int1+ int2).toString()+returnString;
+        // }
+
+        // return parseInt(returnString);
+        // } returnString = (int1+ int2).toString()+returnString;
+        //     // }
+
+        //     return parseInt(returnString);
+
+
+
+        document.getElementById("task4").textContent = add(11122, 81);
+    </script>
+
+
+
+    function add(num1, num2) { return num1 + num2; }
 
 
 
@@ -272,6 +244,141 @@
     </script>
     <hr>
 
+    <h3>Task №2</h3>
+    <div>
+        Вам даны два отсортированных массива, которые оба содержат только целые числа. Ваша задача - найти способ объединить их в один, отсортированный в порядке asc. Завершите функцию mergeArrays (arr1, arr2), где arr1 и arr2 являются исходными отсортированными
+        массивами.
+        <br> Вам не нужно беспокоиться о проверке, поскольку arr1 и arr2 должны быть массивами с 0 или более целыми числами. Если arr1 и arr2 пусты, просто верните пустой массив.
+        <br> Примечание: arr1 и arr2 могут быть отсортированы в разных порядках. Также arr1 и arr2 могут иметь одинаковые целые числа. Удалить дублированный в возвращенном результате.
+    </div>
+    <div class="exemple">
+        <pre>
+        <code>
+          arr1 = [1, 2, 3, 4, 5];arr2 = [6, 7, 8, 9, 10];mergeArrays(arr1, arr2); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+          arr3 = [1, 3, 5, 7, 9];arr4 = [10, 8, 6, 4, 2];mergeArrays(arr3, arr4); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+          
+          arr5 = [1, 3, 5, 7, 9, 11, 12];arr6 = [1, 2, 3, 4, 5, 10, 12];mergeArrays(arr5, arr6); // [1, 2, 3, 4, 5, 7, 9, 10, 11, 12]
+        </code>
+      </pre>
+    </div>
+
+    <pre>
+      <code>
+        function delDuplicate(value) {
+            return arr1.indexOf(value) < 0;
+        }
+        rezult = arr1.concat(arr2.filter(delDuplicate));
+        return rezult.sort((a, b) => a - b);
+      </code>
+    </pre>
+    <div id="task2">Результат:</div>
+
+    <script>
+        function mergeArrays(arr1, arr2) {
+
+            function delDuplicate(value) {
+                return arr1.indexOf(value) < 0;
+            }
+            rezult = arr1.concat(arr2.filter(delDuplicate));
+            return rezult.sort((a, b) => a - b);
+
+        }
+
+        //return Array.from(new Set(arr1.concat(arr2).sort((a,b) => (a-b))));
+        //return [...new Set(a.concat(b))].sort((a,b)=>a-b)
+        //return _.sortBy(_.union(arr1, arr2));
+
+
+
+        // function descendingDescending(arr1, arr2) {
+        //     let i = arr1.length - 1,
+        //         j = arr2.length - 1,
+        //         output = [];
+        //     while (i >= 0 && j >= 0) {
+        //         if (arr1[i] < arr2[j]) {
+        //             output[output.length] = arr1[i];
+        //             i--;
+        //         } else if (arr1[i] > arr2[j]) {
+        //             output[output.length] = arr2[j];
+        //             j--;
+        //         } else {
+        //             output[output.length] = arr1[i];
+        //             i--;
+        //             j--;
+        //         }
+        //     }
+        //     for (; i >= 0; i--)
+        //         output[output.length] = arr1[i];
+        //     for (; j >= 0; j--)
+        //         output[output.length] = arr2[j];
+        //     return output;
+        // }
+
+        // function ascendingDescending(arr1, arr2){
+        //   let i = 0, j = arr2.length - 1, output = [];
+        //   while (i < arr1.length && j >= 0){
+        //     if (arr1[i] < arr2[j]){
+        //       output[output.length] = arr1[i];
+        //       i++;
+        //     }
+        //     else if (arr1[i] > arr2[j]){
+        //       output[output.length] = arr2[j];
+        //       j--;
+        //     }
+        //     else{
+        //       output[output.length] = arr1[i];
+        //       i++;
+        //       j--;
+        //     }
+        //   }
+        //   for (; i < arr1.length; i++)
+        //     output[output.length] = arr1[i];
+        //   for (; j >= 0; j--)
+        //     output[output.length] = arr2[j];
+        //   return output;
+        // }
+
+        // function ascendingAscending(arr1, arr2){
+        //   let i = 0, j = 0, output = [];
+        //   while (i < arr1.length && j < arr2.length){
+        //     if (arr1[i] < arr2[j]){
+        //       output[output.length] = arr1[i];
+        //       i++;
+        //     }
+        //     else if (arr1[i] > arr2[j]){
+        //       output[output.length] = arr2[j];
+        //       j++;
+        //     }
+        //     else{
+        //       output[output.length] = arr1[i];
+        //       i++;
+        //       j++;
+        //     }
+        //   }
+        //   for (; i < arr1.length; i++)
+        //     output[output.length] = arr1[i];
+        //   for (; j < arr2.length; j++)
+        //     output[output.length] = arr2[j];
+        //   return output;
+        // }
+
+        // function mergeArrays(arr1, arr2) {
+        //   let caseMap = 0;
+        //   if (arr1[0] < arr1[arr1.length - 1])
+        //     caseMap += 2;
+        //   if (arr2[0] < arr2[arr2.length - 1])
+        //     caseMap += 1;
+        //   switch (caseMap){
+        //     case 0 : return descendingDescending(arr1, arr2);
+        //     case 1 : return ascendingDescending(arr2, arr1);
+        //     case 2 : return ascendingDescending(arr1, arr2);
+        //     case 3 : return ascendingAscending(arr1, arr2);
+        //   }
+        // }
+
+        document.getElementById("task2").textContent = mergeArrays([1, 3, 5, 7, 9], [10, 8, 6, 4, 2]);
+    </script>
 
 
 </body>
