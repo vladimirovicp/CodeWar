@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="result">123</div>
+
+    <script>
+
+        function fun(a, b) {
+
+            let nach = a + ' + ' + b + '= ';
+
+            a = String(a);
+            b = b.toString();
+
+            a = a.split('');
+            b = b.split('');
+
+            console.log('a =' + a);
+            console.log('b =' + b);
+
+            a = a.reverse();
+            b = b.reverse();
+
+            console.log('a.reverse()  =  ' + a);
+            console.log('b.reverse()  =  ' + b);
+
+            let max;
+            let min;
+
+            if (a.length > b.length) {
+                max = a.length;
+                min = b.length;
+            } else {
+                max = b.length;
+                min = a.length;
+            }
+
+            console.log(max);
+            console.log(min);
+
+
+
+            let c = [];
+
+            for (let i = 0; i < max; i++) {
+
+                if (i < min) {
+                    c[i] = Number.parseInt(a[i]) + Number.parseInt(b[i]);
+                } else {
+                    if (a.length > b.length) {
+                        c[i] = Number.parseInt(a[i]);
+                    } else {
+                        c[i] = Number.parseInt(b[i]);
+                    }
+                }
+
+                console.log('c[' + i + '] = ' + c[i]);
+            }
+
+            console.log('c ' + c);
+
+
+            for (let i = 0; i < c.length; i++) {
+
+                if (c[i] > 9) {
+
+                    z = Math.floor(c[i] % 10);
+                    if ((i + 1) >= max) {
+                        c[i + 1] = Math.floor(c[i] / 10);
+                    } else {
+                        c[i + 1] = c[i + 1] + Math.floor(c[i] / 10);
+                    }
+
+                    c[i] = z;
+
+                }
+            }
+
+            console.log(Math.floor(15 % 10));
+            console.log(Math.floor(15 / 10));
+
+            console.log('c ' + c);
+
+            c = c.reverse();
+
+            console.log('c ' + c);
+
+            let rezult;
+            rezult = c.join("");
+
+
+            return nach + rezult;
+        }
+
+        document.getElementById("result").textContent = fun(19, 91);
+    </script>
+
+</body>
+
+</html>
