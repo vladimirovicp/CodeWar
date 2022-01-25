@@ -256,17 +256,50 @@ const objD = { c: 3 }
     <h2> 7 kyu <a href="https://www.codewars.com/kata/maximum-triplet-sum-array-series-number-7">name</a></h2>
     <h3>Task №</h3>
 
+    <!-- function maxTriSum(numbers) {
+
+        const noDouble = numbers.filter((element, index) => {
+            return numbers.indexOf(element) === index;
+        });
+
+        const sorеDescending = noDouble.sort((a, b) => b - a);
+
+        return sorеDescending[0] + sorеDescending[1] + sorеDescending[2];
+    } -->
+
 
 
     <h2> 7 kyu <a href="https://www.codewars.com/kata/mylanguages">name</a></h2>
     <h3>Task №</h3>
 
+    <!-- let arrValue = Object.values(results);
+    let arrValue2 = arrValue.filter((value) => value >= 60);
+    let arrSort = arrValue2.sort((a, b) => b - a);
 
+    const rez = arrSort.map(element => {
+        return Object.keys(results).find((key) => results[key] == element);
+    });
+
+
+    return rez; -->
 
     <h2> 7 kyu <a href="https://www.codewars.com/kata/nickname-generator">name</a></h2>
     <h3>Task №</h3>
 
+    <!-- if (name.length <= 3) {
+        return "Error: Name too short";
+    }
 
+    let vowel = false;
+    const vowels = 'aeiou';
+
+    for (let i = 0; i < vowels.length; i++) {
+        if (vowels[i] === name[2]) {
+            vowel = true;
+        }
+    } -->
+
+    return vowel ? name.slice(0, 4) : name.slice(0, 3);
 
     <h2> 7 kyu <a href="https://www.codewars.com/kata/odd-even-string-sort">name</a></h2>
     <h3>Task №</h3>

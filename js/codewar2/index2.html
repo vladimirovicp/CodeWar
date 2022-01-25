@@ -13,21 +13,30 @@
     <div id="result">123</div>
 
     <script>
+        function nicknameGenerator(name) {
 
-function getDecimal(n){
+            if (name.length <= 3) {
+                return "Error: Name too short";
+            }
 
-    console.log('n= ', n)
-    console.log( parseInt((n + '').split('.')[1])  )
-  
-  return n % 10 >= 0 ? n%10 : -n%10; // fix me 
+            let vowel = false;
+            const vowels = 'aeiou';
 
-}
+            for (let i = 0; i < vowels.length; i++) {
+                if (vowels[i] === name[2]) {
+                    vowel = true;
+                }
+            }
+
+            return vowel ? name.slice(0, 4) : name.slice(0, 3);
+
+        }
 
 
 
 
 
-        document.getElementById("result").textContent = getDecimal(10);
+        document.getElementById("result").textContent = nicknameGenerator("Jimmy");
     </script>
 
 </body>
