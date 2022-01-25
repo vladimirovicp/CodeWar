@@ -305,10 +305,40 @@ const objD = { c: 3 }
     <h3>Task №</h3>
 
 
+    <!-- function sortMyString(S) {
+        // your code here
+
+        let str1 = S[0];
+        let str2 = '';
+
+        console.log(S.length);
+
+        for (let i = 1; i < S.length; i++) {
+
+            i % 2 === 0 ? str1 += S[i] : str2 += S[i];
+        }
+
+        return str1 + ' ' + str2;
+    }
+
+    const sortMyString = s => {
+        let even = s.split('').filter((v, i) => i % 2 === 0).join('')
+        let odd = s.split('').filter((v, i) => i % 2 !== 0).join('')
+        return even + ' ' + odd
+    } -->
 
     <h2> 7 kyu <a href="https://www.codewars.com/kata/power-of-two">name</a></h2>
     <h3>Task №</h3>
 
+    <!-- function isPowerOfTwo(n){
+        if (n === 1){ 
+            return true;}
+
+        while (n > 2) {
+            n = n / 2;
+        }
+        return n == 2 ? true : false;
+} -->
 
 
     <h2> 7 kyu <a href="https://www.codewars.com/kata/string-reordering">name</a></h2>
@@ -362,7 +392,7 @@ const objD = { c: 3 }
     <div id="task1">Результат:</div>
 
     <script>
-        var ArrowFunc = function(arr) {
+        var ArrowFunc = function (arr) {
             return arr.map(mychar => String.fromCharCode(mychar)).join('');
         }
 
@@ -372,10 +402,14 @@ const objD = { c: 3 }
 
     <h3>Task №2</h3>
     <div>
-        Вам даны два отсортированных массива, которые оба содержат только целые числа. Ваша задача - найти способ объединить их в один, отсортированный в порядке asc. Завершите функцию mergeArrays (arr1, arr2), где arr1 и arr2 являются исходными отсортированными
+        Вам даны два отсортированных массива, которые оба содержат только целые числа. Ваша задача - найти способ
+        объединить их в один, отсортированный в порядке asc. Завершите функцию mergeArrays (arr1, arr2), где arr1 и arr2
+        являются исходными отсортированными
         массивами.
-        <br> Вам не нужно беспокоиться о проверке, поскольку arr1 и arr2 должны быть массивами с 0 или более целыми числами. Если arr1 и arr2 пусты, просто верните пустой массив.
-        <br> Примечание: arr1 и arr2 могут быть отсортированы в разных порядках. Также arr1 и arr2 могут иметь одинаковые целые числа. Удалить дублированный в возвращенном результате.
+        <br> Вам не нужно беспокоиться о проверке, поскольку arr1 и arr2 должны быть массивами с 0 или более целыми
+        числами. Если arr1 и arr2 пусты, просто верните пустой массив.
+        <br> Примечание: arr1 и arr2 могут быть отсортированы в разных порядках. Также arr1 и arr2 могут иметь
+        одинаковые целые числа. Удалить дублированный в возвращенном результате.
     </div>
     <div class="exemple">
         <pre>

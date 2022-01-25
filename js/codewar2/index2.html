@@ -13,30 +13,55 @@
     <div id="result">123</div>
 
     <script>
-        function nicknameGenerator(name) {
 
-            if (name.length <= 3) {
-                return "Error: Name too short";
+
+        function sentence(List) {
+            // your code
+
+            console.log(Object.keys(List[0])[0]);
+
+            console.log(List);
+            //console.log(List.length);
+
+
+
+
+            let masKey = [];
+            for (let i = 0; i < List.length; i++) {
+                //console.log(Object.keys(List[i])[0]);
+                masKey[i] = Object.keys(List[i])[0];
             }
 
-            let vowel = false;
-            const vowels = 'aeiou';
+            const sortMasKey = masKey.sort((a, b) => a - b);
 
-            for (let i = 0; i < vowels.length; i++) {
-                if (vowels[i] === name[2]) {
-                    vowel = true;
-                }
+            //console.log(sortMasKey);
+
+            // let rez = List.map((i) => {
+            //     //return Object.values(sortMasKey[i])[0];
+            //     console.log(i);
+            //     console.log(List[i]);
+            // });
+
+            for (let i = 0; i < List.length; i++) {
+                console.log(Object.keys(List['i'])[0]);
+
             }
 
-            return vowel ? name.slice(0, 4) : name.slice(0, 3);
+
+
+
+            // console.log(rez);
 
         }
 
 
 
+        let List = [
+            { '4': 'dog' }, { '2': 'took' }, { '3': 'his' },
+            { '-2': 'Vatsan' }, { '5': 'for' }, { '6': 'a' }, { '12': 'spin' }
+        ];
 
-
-        document.getElementById("result").textContent = nicknameGenerator("Jimmy");
+        document.getElementById("result").textContent = sentence(List);
     </script>
 
 </body>
