@@ -13,18 +13,18 @@
     <div id="result">123</div>
 
     <script>
-        function spread(func, args) {
-
-            var myObject = {
-                summ: func
-            }
-            return myObject.summ(...args);
-
+        function killer(suspectInfo, dead) {
+            //your code here...
         }
 
-        document.getElementById("result").textContent = spread(function(x, y) {
-            return x + y
-        }, [1, 2]);
+
+
+
+        document.getElementById("result").textContent = killer({
+            'James': ['Jacob', 'Bill', 'Lucas'],
+            'Johnny': ['David', 'Kyle', 'Lucas'],
+            'Peter': ['Lucy', 'Kyle']
+        }, ['Lucas', 'Bill']);
     </script>
 
 </body>
