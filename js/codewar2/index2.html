@@ -13,55 +13,18 @@
     <div id="result">123</div>
 
     <script>
+        function spread(func, args) {
 
-
-        function sentence(List) {
-            // your code
-
-            console.log(Object.keys(List[0])[0]);
-
-            console.log(List);
-            //console.log(List.length);
-
-
-
-
-            let masKey = [];
-            for (let i = 0; i < List.length; i++) {
-                //console.log(Object.keys(List[i])[0]);
-                masKey[i] = Object.keys(List[i])[0];
+            var myObject = {
+                summ: func
             }
-
-            const sortMasKey = masKey.sort((a, b) => a - b);
-
-            //console.log(sortMasKey);
-
-            // let rez = List.map((i) => {
-            //     //return Object.values(sortMasKey[i])[0];
-            //     console.log(i);
-            //     console.log(List[i]);
-            // });
-
-            for (let i = 0; i < List.length; i++) {
-                console.log(Object.keys(List['i'])[0]);
-
-            }
-
-
-
-
-            // console.log(rez);
+            return myObject.summ(...args);
 
         }
 
-
-
-        let List = [
-            { '4': 'dog' }, { '2': 'took' }, { '3': 'his' },
-            { '-2': 'Vatsan' }, { '5': 'for' }, { '6': 'a' }, { '12': 'spin' }
-        ];
-
-        document.getElementById("result").textContent = sentence(List);
+        document.getElementById("result").textContent = spread(function(x, y) {
+            return x + y
+        }, [1, 2]);
     </script>
 
 </body>

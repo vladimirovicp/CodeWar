@@ -344,11 +344,77 @@ const objD = { c: 3 }
     <h2> 7 kyu <a href="https://www.codewars.com/kata/string-reordering">name</a></h2>
     <h3>Task №</h3>
 
+    <!-- function sentence(List) {
+        // your code
 
+        const sortList = List.sort((a, b) => {
+            return Object.keys(a)[0] - Object.keys(b)[0];
+        });
+
+        let rez = '';
+
+        for (let i = 0; i < sortList.length - 1; i++) {
+            rez = rez + Object.values(sortList[i])[0] + ' ';
+        }
+
+        rez = rez + Object.values(sortList[sortList.length - 1])[0];
+
+        return rez;
+    }
+    
+
+
+const sentence = list =>
+list
+.sort((a, b) => Object.keys(a)[0] - Object.keys(b)[0])
+.map(item => Object.values(item)[0])
+.join(' ')
+
+
+    let List = [{
+        '4': 'dog'
+    }, {
+        '2': 'took'
+    }, {
+        '3': 'his'
+    }, {
+        '-2': 'Vatsan'
+    }, {
+        '5': 'for'
+    }, {
+        '6': 'a'
+    }, {
+        '12': 'spin'
+    }];
+
+    document.getElementById("result").textContent = sentence(List); -->
 
     <h2> 7 kyu <a href="https://www.codewars.com/kata/sum-with-arrows/">name</a></h2>
     <h3>Task №</h3>
 
+
+    <!-- function spread(func, args) {
+
+        var myObject = {
+            summ: func
+        }
+        return myObject.summ(...args);
+
+    }
+
+    document.getElementById("result").textContent = spread(function(x, y) {
+        return x + y
+    }, [1, 2]); -->
+
+
+    <!-- function spread(func, args) {
+        return func.apply(null, args);
+      } -->
+
+
+    <!-- function spread(func, args) {
+        return func(...args);
+      } -->
 
 
     <h2> 7 kyu <a href="https://www.codewars.com/kata/unpacking-arguments">name</a></h2>
@@ -392,7 +458,7 @@ const objD = { c: 3 }
     <div id="task1">Результат:</div>
 
     <script>
-        var ArrowFunc = function (arr) {
+        var ArrowFunc = function(arr) {
             return arr.map(mychar => String.fromCharCode(mychar)).join('');
         }
 
@@ -402,14 +468,10 @@ const objD = { c: 3 }
 
     <h3>Task №2</h3>
     <div>
-        Вам даны два отсортированных массива, которые оба содержат только целые числа. Ваша задача - найти способ
-        объединить их в один, отсортированный в порядке asc. Завершите функцию mergeArrays (arr1, arr2), где arr1 и arr2
-        являются исходными отсортированными
+        Вам даны два отсортированных массива, которые оба содержат только целые числа. Ваша задача - найти способ объединить их в один, отсортированный в порядке asc. Завершите функцию mergeArrays (arr1, arr2), где arr1 и arr2 являются исходными отсортированными
         массивами.
-        <br> Вам не нужно беспокоиться о проверке, поскольку arr1 и arr2 должны быть массивами с 0 или более целыми
-        числами. Если arr1 и arr2 пусты, просто верните пустой массив.
-        <br> Примечание: arr1 и arr2 могут быть отсортированы в разных порядках. Также arr1 и arr2 могут иметь
-        одинаковые целые числа. Удалить дублированный в возвращенном результате.
+        <br> Вам не нужно беспокоиться о проверке, поскольку arr1 и arr2 должны быть массивами с 0 или более целыми числами. Если arr1 и arr2 пусты, просто верните пустой массив.
+        <br> Примечание: arr1 и arr2 могут быть отсортированы в разных порядках. Также arr1 и arr2 могут иметь одинаковые целые числа. Удалить дублированный в возвращенном результате.
     </div>
     <div class="exemple">
         <pre>
