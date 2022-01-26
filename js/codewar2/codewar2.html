@@ -443,6 +443,42 @@ list
     <h2> 7 kyu <a href="https://www.codewars.com/kata/who-is-the-killer-1">name</a></h2>
     <h3>Task №</h3>
 
+    <!-- function killer(suspectInfo, dead) {
+
+        let probability = {};
+
+        for (keys in suspectInfo){
+            console.log(keys);
+            probability[keys] = 0;
+            for(contact in suspectInfo[keys]){
+                dead.forEach((value) => {
+                    if(value === suspectInfo[keys][contact]){
+                        probability[keys]++;
+                    }
+                });
+            }
+        }
+        let max = 0;
+        let nameKiller = '';
+
+        for (names in probability){
+
+            if( max < probability[names]){
+                max = probability[names];
+                nameKiller = names;
+            }
+        }
+
+        return nameKiller;
+
+    }
+
+
+    document.getElementById("result").textContent = killer({
+        'James': ['Jacob', 'Bill', 'Lucas'],
+        'Johnny': ['David', 'Kyle', 'Lucas'],
+        'Peter': ['Lucy', 'Kyle']
+    }, ['Lucas', 'Bill']); -->
 
 
     <h2> 6 kyu <a href="https://www.codewars.com/kata/data-reverse">name</a></h2>

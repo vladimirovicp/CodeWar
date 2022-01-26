@@ -13,18 +13,32 @@
     <div id="result">123</div>
 
     <script>
-        function killer(suspectInfo, dead) {
-            //your code here...
+        function dataReverse(data) {
+            let rez = [];
+            let count = 0;
+
+             for( let i = data.length - 1; i >= 0; i=i-8){
+                for( let j = 8; j > 0; j-- ){
+                    rez[count] = data[i - j + 1];
+                    count++;
+                }
+            }
+            return rez;
+
+
+
         }
 
 
+        const data1 = [1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,0,1,0]
+        const data2 = [1,0,1,0,1,0,1,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1]
+
+        const data3 = [0,0,1,1,0,1,1,0,0,0,1,0,1,0,0,1]
+        const data4 = [0,0,1,0,1,0,0,1,0,0,1,1,0,1,1,0]
+
+        document.getElementById("result").textContent = dataReverse(data1);
 
 
-        document.getElementById("result").textContent = killer({
-            'James': ['Jacob', 'Bill', 'Lucas'],
-            'Johnny': ['David', 'Kyle', 'Lucas'],
-            'Peter': ['Lucy', 'Kyle']
-        }, ['Lucas', 'Bill']);
     </script>
 
 </body>
