@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="result">123</div>
+
+    <script>
+        function convert(input, source, target) {
+
+
+            // if (source.length <= 36 && target.length <= 36) {
+            //     return parseInt(input, source.length).toString(target.length);
+            // } else {
+
+            //     return input.map((value, index) =>{
+            //         value
+            //     })
+
+            // }
+
+
+            console.log()
+
+
+
+
+        }
+
+        let Alphabet = {
+            BINARY: '01',
+            OCTAL: '01234567',
+            DECIMAL: '0123456789',
+            HEXA_DECIMAL: '0123456789abcdef',
+            ALPHA_LOWER: 'abcdefghijklmnopqrstuvwxyz',
+            ALPHA_UPPER: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+            ALPHA: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',
+            ALPHA_NUMERIC: '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        };
+
+        let bin = Alphabet.BINARY,
+            oct = Alphabet.OCTAL,
+            dec = Alphabet.DECIMAL,
+            hex = Alphabet.HEXA_DECIMAL,
+            allow = Alphabet.ALPHA_LOWER,
+            alup = Alphabet.ALPHA_UPPER,
+            alpha = Alphabet.ALPHA,
+            alnum = Alphabet.ALPHA_NUMERIC;
+
+
+
+        //document.getElementById("result").textContent = convert("15", dec, bin);
+        document.getElementById("result").textContent = convert("0", dec, alpha);
+    </script>
+
+
+    <!-- https://www.codewars.com/kata/count-strings-in-objects
+    <script>
+    function strCount(obj) {
+        // Your code here
+
+        function recursion(obj1) {
+
+            for (key in obj1) {
+                if (typeof(obj1[key]) == 'object') {
+                    recursion(obj1[key]);
+                } else {
+                    typeof(obj1[key]) == 'string' ? count++ : count;
+                }
+            }
+
+        }
+
+        let count = 0;
+
+        for (key in obj) {
+
+            console.log(typeof(obj[key]));
+
+            if (typeof(obj[key]) == 'object') {
+                recursion(obj[key]);
+            } else {
+                typeof(obj[key]) == 'string' ? count++ : count;
+            }
+        }
+
+        return count;
+    }
+
+    document.getElementById("result").textContent = strCount({
+        first: "1",
+        second: "2",
+        third: false,
+        fourth: ["anytime", 2, 3, ['fghfg', 2]],
+        fifth: null,
+        sixth: undefined,
+        seventh: {}
+    });
+</script> -->
+
+</body>
+
+</html>
