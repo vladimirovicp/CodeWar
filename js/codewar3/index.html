@@ -14,23 +14,63 @@
 
     <script>
         function convert(input, source, target) {
+            let notationIn = source.length;
+            let notationOut = target.length;
+
+            let decimalNumberSystem = 0; // Дестяричная система счисления
 
 
-            // if (source.length <= 36 && target.length <= 36) {
-            //     return parseInt(input, source.length).toString(target.length);
-            // } else {
+            if (notationIn != 10) {
 
-            //     return input.map((value, index) =>{
-            //         value
-            //     })
+                let x = input.split('');
+                let a = 0;
+                let q = 0;
 
-            // }
+                for (i = 0; i < x.length; i++) {
+
+                    console.log('n=' + (x.length - i - 1));
+
+                    //a = source.indexOf(x[x.length - i - 1]);
+                    a = source.indexOf(x[i]);
+                    q = Math.pow(notationIn, x.length - i - 1);
+
+                    console.log('a ' + a + ' | q ' + q);
 
 
-            console.log()
+                    decimalNumberSystem += a * q;
+                }
+            } else {
+                decimalNumberSystem = input;
+            }
+
+            console.log(decimalNumberSystem);
+
+            if (target.length === 10) {
+                console.log('toDec')
+                return decimalNumberSystem.toString();
+            }
+
+            let rezMas = [];
+            let perevod = decimalNumberSystem
+            let k = 0;
+
+            while (perevod >= notationOut) {
+                rezMas[k] = perevod % notationOut;
+                perevod = Math.floor(perevod / notationOut);
+                k++;
+            }
 
 
 
+            rezMas.push(perevod);
+
+            console.log(rezMas)
+
+            const rez = rezMas.map(value => {
+                return target[value];
+            }).reverse().join('');
+
+            return rez;
 
         }
 
@@ -57,7 +97,7 @@
 
 
         //document.getElementById("result").textContent = convert("15", dec, bin);
-        document.getElementById("result").textContent = convert("0", dec, alpha);
+        document.getElementById("result").textContent = convert("1337", dec, bin);
     </script>
 
 
@@ -103,6 +143,97 @@
         sixth: undefined,
         seventh: {}
     });
+</script> -->
+
+
+    <!-- https://www.codewars.com/kata/base-conversion -->
+
+    <!-- <script>
+    function convert(input, source, target) {
+        let notationIn = source.length;
+        let notationOut = target.length;
+
+        let decimalNumberSystem = 0; // Дестяричная система счисления
+
+
+        if (notationIn != 10) {
+
+            let x = input.split('');
+            let a = 0;
+            let q = 0;
+
+            for (i = 0; i < x.length; i++) {
+
+                console.log('n=' + (x.length - i - 1));
+
+                //a = source.indexOf(x[x.length - i - 1]);
+                a = source.indexOf(x[i]);
+                q = Math.pow(notationIn, x.length - i - 1);
+
+                console.log('a ' + a + ' | q ' + q);
+
+
+                decimalNumberSystem += a * q;
+            }
+        } else {
+            decimalNumberSystem = input;
+        }
+
+        console.log(decimalNumberSystem);
+
+        if (target.length === 10) {
+            console.log('toDec')
+            return decimalNumberSystem.toString();
+        }
+
+        let rezMas = [];
+        let perevod = decimalNumberSystem
+        let k = 0;
+
+        while (perevod >= notationOut) {
+            rezMas[k] = perevod % notationOut;
+            perevod = Math.floor(perevod / notationOut);
+            k++;
+        }
+
+
+
+        rezMas.push(perevod);
+
+        console.log(rezMas)
+
+        const rez = rezMas.map(value => {
+            return target[value];
+        }).reverse().join('');
+
+        return rez;
+
+    }
+
+    let Alphabet = {
+        BINARY: '01',
+        OCTAL: '01234567',
+        DECIMAL: '0123456789',
+        HEXA_DECIMAL: '0123456789abcdef',
+        ALPHA_LOWER: 'abcdefghijklmnopqrstuvwxyz',
+        ALPHA_UPPER: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+        ALPHA: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ',
+        ALPHA_NUMERIC: '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    };
+
+    let bin = Alphabet.BINARY,
+        oct = Alphabet.OCTAL,
+        dec = Alphabet.DECIMAL,
+        hex = Alphabet.HEXA_DECIMAL,
+        allow = Alphabet.ALPHA_LOWER,
+        alup = Alphabet.ALPHA_UPPER,
+        alpha = Alphabet.ALPHA,
+        alnum = Alphabet.ALPHA_NUMERIC;
+
+
+
+    //document.getElementById("result").textContent = convert("15", dec, bin);
+    document.getElementById("result").textContent = convert("1337", dec, bin);
 </script> -->
 
 </body>
