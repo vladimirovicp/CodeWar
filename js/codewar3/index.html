@@ -13,45 +13,31 @@
     <div id="result">123</div>
 
     <script>
-    function getCard() {
-        // Start your coding here...
+        let countBits = function (n) {
+            let count = 0;
+            let arrNum = [];
 
-        const bingo = 
-            {
-                B:{count:5,max:15,min:1,},
-                I:{count:5,max:30,min:16},
-                N:{count:4,max:45,min:31},
-                G:{count:5,max:60,min:46},
-                O:{count:5,max:75,min:61}
-            };
-
-        let generator = [];
-
-        for (key in bingo){
-            let i = 0;
-            let randomArr = [];
-            while (i < bingo[key].count ){
-                randomNum = Math.round(Math.random() * (bingo[key].max - bingo[key].min) + bingo[key].min);
-
-                if (randomArr.find(item => item == randomNum) === undefined){
-                    randomArr.push(randomNum);
-                    i++;
-                }
+            while (n >= 2) {
+                arrNum.push(n % 2);
+                n = Math.floor(n / 2);
             }
 
-            randomArr.sort((a,b) => b - a);
-            console.log(randomArr);
-            randomArr.forEach(item => {
-                generator.push(key + item);
-            })
-        }
+            arrNum.push(n);
 
-       return generator;
-    }
+            arrNum.forEach(element => {
+                element === 1 ? count++ : null
+            });
+
+            return count
+
+            //countBits = n => n.toString(2).split('0').join('').length;
+
+        };
 
 
 
-        document.getElementById("result").textContent = getCard();
+
+        document.getElementById("result").textContent = countBits(8);
     </script>
 
 
@@ -193,8 +179,8 @@
 
 
 
-<!-- //https://www.codewars.com/kata/bingo-card -->
-<!-- function getCard() {
+    <!-- //https://www.codewars.com/kata/bingo-card -->
+    <!-- function getCard() {
     // Start your coding here...
 
     const bingo = 
@@ -234,6 +220,66 @@
 
     document.getElementById("result").textContent = getCard();
 </script> -->
+
+    <!-- https://www.codewars.com/kata/bit-counting -->
+
+    <!-- <script>
+        let countBits = function (n) {
+            let count = 0;
+            let arrNum = [];
+
+            while (n >= 2) {
+                arrNum.push(n % 2);
+                n = Math.floor(n / 2);
+            }
+
+            arrNum.push(n);
+
+            arrNum.forEach(element => {
+                element === 1 ? count++ : null
+            });
+
+            return count
+
+            //countBits = n => n.toString(2).split('0').join('').length;
+
+        };
+
+
+
+
+        document.getElementById("result").textContent = countBits(8);
+    </script> -->
+
+
+
+
+    <!-- 6 kyu https://www.codewars.com/kata/clocky-mc-clock-face -->
+
+
+    <!-- <script>
+        var whatTimeIsIt = function (angle) {
+
+            const hour = Math.floor(angle / 30) + '';
+
+            if (hour === '0') { rez = '12'; } else {
+                rez = hour.length === 1 ? '0' + hour : hour;
+            }
+
+            const min = Math.floor((angle - hour * 30) * 2) + ''
+            rez += min.length === 1 ? ':0' + min : ':' + min;
+
+            return rez;
+        }
+
+        // var whatTimeIsIt = function (angle) {
+        //     let h = ~~(angle / 30), m = ~~((angle % 30) * 2);
+        //     return `${h == 0 ? 12 : h > 9 ? h : "0" + h}:${m > 9 ? m : "0" + m}`
+        // }
+
+
+        document.getElementById("result").textContent = whatTimeIsIt(5, 45645);
+    </script> -->
 
 </body>
 
