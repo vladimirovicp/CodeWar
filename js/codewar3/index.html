@@ -13,23 +13,21 @@
     <div id="result">123</div>
 
     <script>
-        function toWeirdCase(string) {
-            //TODO
+        function rgb(r, g, b) {
+            // complete this function  
+            const rgb = [r, g, b];
 
-            console.log(string);
-            console.log(string.split(' '));
+            return rgb.map(value => {
+                value < 0 ? value = 0 : value;
+                value > 255 ? value = 255 : value;
+                return (value.toString(16).length === 1 ? '0' + value.toString(16) : value.toString(16)).toUpperCase()
+            }).join('');
 
 
-            return string.split(' ').map(value => {
-                let world = '';
-                for (i = 0; i < value.length; i++) {
-                    world += i % 2 !== 0 ? value[i].toLowerCase() : value[i].toUpperCase();
-                }
-                return world;
-            }).join(' ');
+
         }
 
-        document.getElementById("result").textContent = toWeirdCase('This is a test');
+        document.getElementById("result").textContent = rgb(0, 0, 0);
     </script>
 
 
@@ -346,6 +344,27 @@
         }
 
         document.getElementById("result").textContent = toWeirdCase('This is a test');
+    </script> -->
+
+
+    <!-- 5 kyu https://www.codewars.com/kata/rgb-to-hex-conversion
+
+    <script>
+        function rgb(r, g, b) {
+            // complete this function  
+            const rgb = [r, g, b];
+
+            return rgb.map(value => {
+                value < 0 ? value = 0 : value;
+                value > 255 ? value = 255 : value;
+                return (value.toString(16).length === 1 ? '0' + value.toString(16) : value.toString(16)).toUpperCase()
+            }).join('');
+
+
+
+        }
+
+        document.getElementById("result").textContent = rgb(0, 0, 0);
     </script> -->
 
 </body>
