@@ -15,43 +15,27 @@
     <script>
         function isPrime(num) {
 
-            if (num <= 1) { return false; }
 
-            //Math.sqrt(num) // 3 037
+            if (num < 2) {
+                return false;
+            } else {
 
-            console.log(Math.sqrt(240441221))
+                const number = Math.sqrt(num);
+                let i = 2;
+                let nestop = true;
 
-            let arr = [2, 3, 5, 7];
-            let rez = [];
-            arr.forEach((value, index) => {
-
-                if (num != value) {
-                    if (num % value === 0) {
-                        rez.push(false)
-                    } else {
-                        rez.push(true)
+                while (i <= number && nestop) {
+                    if (num != i) {
+                        num % i === 0 ? nestop = false : stop;
                     }
+                    //console.log(i + ' ' + stop)
+                    i++
                 }
-
-                console.log(value + ' ' + rez[index])
-
-
-
-            })
-
-            return rez.find(item => item === false) === undefined ? true : false;
-
+                return nestop;
+            }
         }
 
-        //is prime
-        //75 is not prime
-
-
-
-        document.getElementById("result").textContent = isPrime(9223369);
-
-        //9223369
-        //240441221
+        document.getElementById("result").textContent = isPrime(45);
     </script>
 
 
@@ -293,6 +277,35 @@
 
 
         document.getElementById("result").textContent = whatTimeIsIt(5, 45645);
+    </script> -->
+
+    <!-- https://www.codewars.com/kata/is-a-number-prime -->
+
+
+    <!-- <script>
+        function isPrime(num) {
+
+
+            if (num < 2) {
+                return false;
+            } else {
+
+                const number = Math.sqrt(num);
+                let i = 2;
+                let nestop = true;
+
+                while (i <= number && nestop) {
+                    if (num != i) {
+                        num % i === 0 ? nestop = false : stop;
+                    }
+                    //console.log(i + ' ' + stop)
+                    i++
+                }
+                return nestop;
+            }
+        }
+
+        document.getElementById("result").textContent = isPrime(45);
     </script> -->
 
 </body>
