@@ -13,29 +13,23 @@
     <div id="result">123</div>
 
     <script>
-        function isPrime(num) {
+        function toWeirdCase(string) {
+            //TODO
+
+            console.log(string);
+            console.log(string.split(' '));
 
 
-            if (num < 2) {
-                return false;
-            } else {
-
-                const number = Math.sqrt(num);
-                let i = 2;
-                let nestop = true;
-
-                while (i <= number && nestop) {
-                    if (num != i) {
-                        num % i === 0 ? nestop = false : stop;
-                    }
-                    //console.log(i + ' ' + stop)
-                    i++
+            return string.split(' ').map(value => {
+                let world = '';
+                for (i = 0; i < value.length; i++) {
+                    world += i % 2 !== 0 ? value[i].toLowerCase() : value[i].toUpperCase();
                 }
-                return nestop;
-            }
+                return world;
+            }).join(' ');
         }
 
-        document.getElementById("result").textContent = isPrime(45);
+        document.getElementById("result").textContent = toWeirdCase('This is a test');
     </script>
 
 
@@ -306,6 +300,52 @@
         }
 
         document.getElementById("result").textContent = isPrime(45);
+    </script> -->
+
+
+    <!-- 6 kyu https://www.codewars.com/kata/who-likes-it -->
+
+    <!-- <script>
+        function likes(names) {
+
+            let likeNames;
+
+            switch (names.length) {
+                case 0: likeNames = 'no one likes this'; break;
+                case 1: likeNames = names[0] + ' likes this'; break;
+                case 2: likeNames = names[0] + ' and ' + names[1] + ' like this'; break;
+                case 3: likeNames = names[0] + ', ' + names[1] + ' and ' + names[2] + ' like this'; break;
+                default: likeNames = names[0] + ', ' + names[1] + ' and ' + (names.length - 2) + ' others like this';
+                    break;
+            }
+
+            return likeNames;
+        }
+
+        document.getElementById("result").textContent = likes(['Alex', 'Jacob', 'Mark', 'Max']);
+    </script> -->
+
+
+    <!-- 6 kyu https://www.codewars.com/kata/weird-string-case -->
+
+    <!-- <script>
+        function toWeirdCase(string) {
+            //TODO
+
+            console.log(string);
+            console.log(string.split(' '));
+
+
+            return string.split(' ').map(value => {
+                let world = '';
+                for (i = 0; i < value.length; i++) {
+                    world += i % 2 !== 0 ? value[i].toLowerCase() : value[i].toUpperCase();
+                }
+                return world;
+            }).join(' ');
+        }
+
+        document.getElementById("result").textContent = toWeirdCase('This is a test');
     </script> -->
 
 </body>
