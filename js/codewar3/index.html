@@ -13,31 +13,45 @@
     <div id="result">123</div>
 
     <script>
-        let countBits = function (n) {
-            let count = 0;
-            let arrNum = [];
+        function isPrime(num) {
 
-            while (n >= 2) {
-                arrNum.push(n % 2);
-                n = Math.floor(n / 2);
-            }
+            if (num <= 1) { return false; }
 
-            arrNum.push(n);
+            //Math.sqrt(num) // 3 037
 
-            arrNum.forEach(element => {
-                element === 1 ? count++ : null
-            });
+            console.log(Math.sqrt(240441221))
 
-            return count
+            let arr = [2, 3, 5, 7];
+            let rez = [];
+            arr.forEach((value, index) => {
 
-            //countBits = n => n.toString(2).split('0').join('').length;
+                if (num != value) {
+                    if (num % value === 0) {
+                        rez.push(false)
+                    } else {
+                        rez.push(true)
+                    }
+                }
 
-        };
+                console.log(value + ' ' + rez[index])
 
 
 
+            })
 
-        document.getElementById("result").textContent = countBits(8);
+            return rez.find(item => item === false) === undefined ? true : false;
+
+        }
+
+        //is prime
+        //75 is not prime
+
+
+
+        document.getElementById("result").textContent = isPrime(9223369);
+
+        //9223369
+        //240441221
     </script>
 
 
