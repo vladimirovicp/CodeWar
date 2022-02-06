@@ -13,21 +13,33 @@
     <div id="result">123</div>
 
     <script>
-        function rgb(r, g, b) {
-            // complete this function  
-            const rgb = [r, g, b];
+        // function bingo(ticket, win) {
+        //     let count = 0;
+        //     ticket.forEach(element => {
+        //         console.log(element[0].charCodeAt(0) + ' ' + element[1]);
+        //         element[0].charCodeAt(0) == element[1] ? count++ : count;
+        //     });
+        //     console.log(count)
+        //     return count === win ? 'Winner!' : 'Loser!'
+        // }
 
-            return rgb.map(value => {
-                value < 0 ? value = 0 : value;
-                value > 255 ? value = 255 : value;
-                return (value.toString(16).length === 1 ? '0' + value.toString(16) : value.toString(16)).toUpperCase()
-            }).join('');
+        function bingo(ticket, win) {
 
+
+            if (ticket.filter(a => a[0].split('').some(b => b.charCodeAt(0) == a[1])).length >= win) {
+                return "Winner!";
+            }
+            return "Loser!";
 
 
         }
 
-        document.getElementById("result").textContent = rgb(0, 0, 0);
+        // document.getElementById("result").textContent = bingo([['HGTYRE', 74], ['BE', 66], ['JKTY', 74]], 3);
+        // document.getElementById("result").textContent = bingo([['RADCLIUP', 85], ['SSHIY', 80], ['QHNIQBVH', 74], ['OH', 73], ['XMHZUXU', 73], ['OQ', 74], ['XW', 76]], 1);
+
+        document.getElementById("result").textContent = bingo([['GKMBAJV', 75], ['BJHEXW', 87]], 2);
+
+        //RADCLIUP,85,SSHIY,80,QHNIQBVH,74,OH,73,XMHZUXU,73,OQ,74,XW,76 и 1
     </script>
 
 
