@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="result">123</div>
+
+    <script>
+    function absentVowel(x){
+
+        const vowel = ['A','E','I','O','U'];
+
+        //console.log( vowel[0].toLowerCase());
+
+
+        let i = 0;
+        while (vowel.length > 0 && i <= x.length){
+
+            vowel.forEach( (element, index) => {
+
+               // console.log(element)
+               //console.log(element + ' | ' + x[i])
+                if (x[i] === element || x[i] === element.toLowerCase()) {
+                    //console.log(element)
+                    //vowel.splice(index,1);
+                    delete vowel[index];
+                }
+            });
+            i++;
+        }
+
+
+        //console.log(vowel);
+
+        //console.log(vowel.length);
+
+
+        let rez = '';
+
+        vowel.forEach((element, index) =>{
+            rez = index;
+           //return index;
+        });
+
+        return rez;
+
+        
+
+        
+
+
+    }
+
+    document.getElementById("result").textContent = absentVowel("John Doe hs seven red pples under his bsket");
+
+
+    </script>
+
+</body>
+
+</html>
