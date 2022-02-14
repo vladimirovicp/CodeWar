@@ -13,52 +13,20 @@
     <div id="result">123</div>
 
     <script>
-    function absentVowel(x){
+function getMiddle(s)
+{
+  //Code goes here!
 
-        const vowel = ['A','E','I','O','U'];
-
-        //console.log( vowel[0].toLowerCase());
-
-
-        let i = 0;
-        while (vowel.length > 0 && i <= x.length){
-
-            vowel.forEach( (element, index) => {
-
-               // console.log(element)
-               //console.log(element + ' | ' + x[i])
-                if (x[i] === element || x[i] === element.toLowerCase()) {
-                    //console.log(element)
-                    //vowel.splice(index,1);
-                    delete vowel[index];
-                }
-            });
-            i++;
-        }
+  console.log(Math.ceil(s.length/2))
 
 
-        //console.log(vowel);
+  return s.length % 2 === 0 ? s[s.length/2 - 1] + s[s.length/2] : s[Math.ceil(s.length/2) - 1]
+      
+  
 
-        //console.log(vowel.length);
+}
 
-
-        let rez = '';
-
-        vowel.forEach((element, index) =>{
-            rez = index;
-           //return index;
-        });
-
-        return rez;
-
-        
-
-        
-
-
-    }
-
-    document.getElementById("result").textContent = absentVowel("John Doe hs seven red pples under his bsket");
+    document.getElementById("result").textContent = getMiddle("testing");
 
 
     </script>
