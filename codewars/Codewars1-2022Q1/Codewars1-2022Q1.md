@@ -5,7 +5,7 @@
 + * 7 kyu https://www.codewars.com/kata/disemvowel-trolls
 + * 7 kyu https://www.codewars.com/kata/isograms
 + * 7 kyu https://www.codewars.com/kata/digits-explosion
-* 6 kyu https://www.codewars.com/kata/handshake-problem
++ * 6 kyu https://www.codewars.com/kata/handshake-problem
 * 6 kyu https://www.codewars.com/kata/duplicate-encoder
 * 6 kyu https://www.codewars.com/kata/n-th-fibonacci
 * 6 kyu https://www.codewars.com/kata/multiples-of-3-or-5
