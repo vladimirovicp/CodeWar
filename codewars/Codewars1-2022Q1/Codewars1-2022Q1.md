@@ -12,7 +12,7 @@
 ## Arrays
  9 + * 7 kyu https://www.codewars.com/kata/head-tail-init-and-last
 10 + * 6 kyu https://www.codewars.com/kata/array-deep-count
-11 * 6 kyu https://www.codewars.com/kata/length-of-missing-array
+11 + * 6 kyu https://www.codewars.com/kata/length-of-missing-array
 12 * 6 kyu https://www.codewars.com/kata/pair-of-gloves
 13 * 6 kyu https://www.codewars.com/kata/sorting-by-bits
 ## Functions
