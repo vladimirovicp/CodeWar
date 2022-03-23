@@ -18,6 +18,10 @@
 
 
 function sortByBit(arr) {
+
+    let num = 7;
+    console.log(parseInt(32,32))
+    console.log( num.toString(32));
     // your solution here
 }
 
