@@ -19,10 +19,24 @@
 
 function sortByBit(arr) {
 
-    let num = 7;
-    console.log(parseInt(32,32))
-    console.log( num.toString(32));
+    //let num = 7;
+    //console.log(parseInt(32,32))
+    //console.log( num.toString(32));
     // your solution here
+
+    arr.map(value=> {
+        //console.log(value.toString(2));
+
+        let count=0;
+        for(let i = 0; i < value.toString(2); i++){
+            value.toString(2)[i] === '1' ? count++ : count;
+        }
+
+        console.log(count)
+        //return count;
+
+
+    })
 }
 
 
