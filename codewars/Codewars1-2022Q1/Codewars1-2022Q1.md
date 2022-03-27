@@ -14,7 +14,7 @@
 10 + * 6 kyu https://www.codewars.com/kata/array-deep-count
 11 + * 6 kyu https://www.codewars.com/kata/length-of-missing-array
 12 + * 6 kyu https://www.codewars.com/kata/pair-of-gloves
-13 * 6 kyu https://www.codewars.com/kata/sorting-by-bits
+13 + * 6 kyu https://www.codewars.com/kata/sorting-by-bits
 ## Functions
 14 * 7 kyu https://www.codewars.com/kata/javascript-mathematician
 15 * 6 kyu https://www.codewars.com/kata/nuclear-missile-manager
