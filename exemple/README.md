@@ -8,6 +8,16 @@ test = '001001'
 test.replace(/0/gi,'')
 Удалит все 0. Рузельтат 11
 
+# reduce()
+## Array.prototype.reduce()
+Метод reduce() применяет функцию reducer к каждому элементу массива (слева-направо), возвращая одно результирующее значение.
+
+var total = [0, 1, 2, 3].reduce(function(a, b) {
+  return a + b;
+});
+// total == 6
+
+
 
 ## sort()
 ### Array.prototype.sort()
@@ -25,3 +35,48 @@ numbers.sort(function(a, b) {
 return a - b;
 });
 console.log(numbers); // [1, 2, 3, 4, 5]
+
+
+
+
+# Функции
+## Рекурсия
+
+Возвести x в степень n
+function pow(x, n) {
+  return (n == 1) ? x : (x * pow(x, n - 1));
+}
+
+## Остаточные параметры (...)
+Вызывать функцию можно с любым количеством аргументов независимо от того, как она была определена.
+
+Остаточные параметры могут быть обозначены через три точки .... Буквально это значит: «собери оставшиеся параметры и положи их в массив».
+
+Например, соберём все аргументы в массив args:
+
+function sumAll(...args) { // args — имя массива
+  let sum = 0;
+
+  for (let arg of args) sum += arg;
+
+  return sum;
+}
+
+alert( sumAll(1) ); // 1
+alert( sumAll(1, 2) ); // 3
+alert( sumAll(1, 2, 3) ); // 6
+
+Мы можем положить первые несколько параметров в переменные, а остальные – собрать в массив.
+function showName(firstName, lastName, ...titles)
+
+## Замыкание
+
+function getFunc() {
+  let value = "test";
+
+  let func = function() { alert(value); };
+
+  return func;
+}
+
+getFunc()(); // "test", из лексического окружения функции getFunc
