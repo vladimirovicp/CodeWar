@@ -18,25 +18,14 @@
 
 
 function sortByBit(arr) {
+    function myParse(x){
+        return x.toString(2).replace(/0/gi,'').length;
+    }
 
-    //let num = 7;
-    //console.log(parseInt(32,32))
-    //console.log( num.toString(32));
-    // your solution here
+    return arr.sort((a,b) => {
+        return myParse(a) === myParse(b) ? a - b : myParse(a) - myParse(b);
+    });
 
-    arr.map(value=> {
-        //console.log(value.toString(2));
-
-        let count=0;
-        for(let i = 0; i < value.toString(2); i++){
-            value.toString(2)[i] === '1' ? count++ : count;
-        }
-
-        console.log(count)
-        //return count;
-
-
-    })
 }
 
 
