@@ -1,23 +1,23 @@
 # Codewars1-2022Q1
 
 ## Numbers, strings
- * 1 + * 7 kyu https://www.codewars.com/kata/highest-and-lowest
- * 2 + * 7 kyu https://www.codewars.com/kata/disemvowel-trolls
- * 3 + * 7 kyu https://www.codewars.com/kata/isograms
- * 4 + * 7 kyu https://www.codewars.com/kata/digits-explosion
- * 5 + * 6 kyu https://www.codewars.com/kata/handshake-problem
- * 6 + * 6 kyu https://www.codewars.com/kata/duplicate-encoder
- * 7 + * 6 kyu https://www.codewars.com/kata/n-th-fibonacci
- * 8 + * 6 kyu https://www.codewars.com/kata/multiples-of-3-or-5
+ * 1 +7 kyu https://www.codewars.com/kata/highest-and-lowest
+ * 2 +7 kyu https://www.codewars.com/kata/disemvowel-trolls
+ * 3 +7 kyu https://www.codewars.com/kata/isograms
+ * 4 +7 kyu https://www.codewars.com/kata/digits-explosion
+ * 5 +6 kyu https://www.codewars.com/kata/handshake-problem
+ * 6 +6 kyu https://www.codewars.com/kata/duplicate-encoder
+ * 7 +6 kyu https://www.codewars.com/kata/n-th-fibonacci
+ * 8 +6 kyu https://www.codewars.com/kata/multiples-of-3-or-5
 ## Arrays
- * 9 + * 7 kyu https://www.codewars.com/kata/head-tail-init-and-last
-* 10 + * 6 kyu https://www.codewars.com/kata/array-deep-count
-* 11 + * 6 kyu https://www.codewars.com/kata/length-of-missing-array
-* 12 + * 6 kyu https://www.codewars.com/kata/pair-of-gloves
-* 13 + * 6 kyu https://www.codewars.com/kata/sorting-by-bits
+ * 9 +7 kyu https://www.codewars.com/kata/head-tail-init-and-last
+* 10 +6 kyu https://www.codewars.com/kata/array-deep-count
+* 11 +6 kyu https://www.codewars.com/kata/length-of-missing-array
+* 12 +6 kyu https://www.codewars.com/kata/pair-of-gloves
+* 13 +6 kyu https://www.codewars.com/kata/sorting-by-bits
 ## Functions
-* 14 + * 7 kyu https://www.codewars.com/kata/javascript-mathematician
-* 15 * 6 kyu https://www.codewars.com/kata/nuclear-missile-manager
+* 14 +7 kyu https://www.codewars.com/kata/javascript-mathematician
+* 15 +6 kyu https://www.codewars.com/kata/nuclear-missile-manager
 * 16 * 6 kyu https://www.codewars.com/kata/closures-and-scopes
 * 17 * 6 kyu https://www.codewars.com/kata/can-you-keep-a-secret
 ## Date
