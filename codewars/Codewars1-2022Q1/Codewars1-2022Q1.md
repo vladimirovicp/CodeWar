@@ -18,7 +18,7 @@
 ## Functions
 * 14 +7 kyu https://www.codewars.com/kata/javascript-mathematician
 * 15 +6 kyu https://www.codewars.com/kata/nuclear-missile-manager
-* 16 * 6 kyu https://www.codewars.com/kata/closures-and-scopes
+* 16 +6 kyu https://www.codewars.com/kata/closures-and-scopes
 * 17 * 6 kyu https://www.codewars.com/kata/can-you-keep-a-secret
 ## Date
 * 18 * 7 kyu https://www.codewars.com/kata/the-coupon-code
